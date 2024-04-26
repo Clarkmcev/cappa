@@ -20,7 +20,7 @@ const Button: React.FC<Props> = ({ route, label, icon }: Props) => {
       onClick={handleClick}
     >
       <div>{icon}</div>
-      <div>{label}</div>
+      <p>{label}</p>
     </button>
   );
 };

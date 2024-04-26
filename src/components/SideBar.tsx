@@ -11,18 +11,12 @@ type Link = {
   icon: React.ReactNode;
 };
 
-const staggerMenuItems = stagger(0.1, { startDelay: 0 });
+const staggerMenuItems = stagger(0.3, { startDelay: 0.6 });
 
 function useMenuAnimation(isRendered: boolean) {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
-    // animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
-    // animate("section", {
-    //   type: "spring",
-    //   bounce: 0,
-    //   duration: 0.5,
-    // });
     animate(
       "button",
       isRendered ? { opacity: 1, color: "red" } : { opacity: 0 },
@@ -31,6 +25,10 @@ function useMenuAnimation(isRendered: boolean) {
         delay: isRendered ? staggerMenuItems : 0,
       }
     );
+    animate("p", isRendered ? { opacity: 1, color: "blue" } : { opacity: 0 }, {
+      duration: 0.2,
+      delay: isRendered ? staggerMenuItems : 0,
+    });
   }, [isRendered]);
 
   return scope;
