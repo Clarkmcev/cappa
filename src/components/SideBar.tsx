@@ -1,7 +1,7 @@
 import { ROUTE_CONTACT, ROUTE_PAINTINGS, ROUTE_ABOUT } from "../constants";
 import Button from "./Button";
 import { ImFilePicture } from "react-icons/im";
-import { animate, motion } from "framer-motion";
+import { animate } from "framer-motion";
 import { useAnimate, stagger } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -11,7 +11,7 @@ type Link = {
   icon: React.ReactNode;
 };
 
-const staggerMenuItems = stagger(0.3, { startDelay: 0.6 });
+const staggerMenuItems = stagger(0.2, { startDelay: 0.2 });
 
 function useMenuAnimation(isRendered: boolean) {
   const [scope, animate] = useAnimate();
@@ -19,16 +19,12 @@ function useMenuAnimation(isRendered: boolean) {
   useEffect(() => {
     animate(
       "button",
-      isRendered ? { opacity: 1, color: "red" } : { opacity: 0 },
+      isRendered ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 },
       {
         duration: 0.2,
         delay: isRendered ? staggerMenuItems : 0,
       }
     );
-    animate("p", isRendered ? { opacity: 1, color: "blue" } : { opacity: 0 }, {
-      duration: 0.2,
-      delay: isRendered ? staggerMenuItems : 0,
-    });
   }, [isRendered]);
 
   return scope;
@@ -54,17 +50,17 @@ function SideBar() {
 
   return (
     <div
-      className="bg-primary w-fit h-screen flex flex-col fixed border-4 border-y-transparent border-l-transparent border-r-secondary"
+      className="bg-primary h-screen flex flex-col fixed border-4 border-y-transparent border-l-transparent border-r-secondary"
       ref={scope}
     >
-      <section className="m-10">Cappa Hhouze</section>
-      <section>
+      {/* <div className="">This is Cappa Houze</div> */}
+      <div>
         {sideBarButtons.map((route: Link) => {
           return (
             <Button route={route.path} label={route.label} icon={route.icon} />
           );
         })}
-      </section>
+      </div>
     </div>
   );
 }

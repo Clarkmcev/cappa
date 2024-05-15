@@ -12,7 +12,7 @@ function App() {
     <div className="h-full bg-primary">
       <BrowserRouter>
         <SideBar />
-        <div className="pl-48">
+        <div className="pl-64">
           <Routes>
             <Route path={"/"} element={<Layout />} />
             <Route path={ROUTE_PAINTINGS} element={<Paintings />} />

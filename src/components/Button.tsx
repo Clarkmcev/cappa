@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface Props {
   route: string;
@@ -9,17 +9,24 @@ interface Props {
 
 const Button: React.FC<Props> = ({ route, label, icon }: Props) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleClick = () => {
     navigate(route);
   };
 
+  const isCurrentPath = location.pathname === route;
+
   return (
     <button
-      className="flex space-x-2 items-center bg-primary text-tertiary hover:text-fourth text-left p-8"
+      className={`flex space-x-2 items-center text-tertiary hover:text-fourth text-left p-4 duration-150 transition-all opacity-0 w-full hover:bg-fourth/ m-2 rounded-lg group hover:bg-secondary/20 ${
+        isCurrentPath ? "bg-secondary/20 text-fourth" : ""
+      }`}
       onClick={handleClick}
     >
-      <div>{icon}</div>
+      <section className="group-hover:-translate-y-0.5 duration-150 transition-all mr-2">
+        {icon}
+      </section>
       <p>{label}</p>
     </button>
   );
