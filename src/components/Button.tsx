@@ -19,7 +19,7 @@ const Button: React.FC<Props> = ({ route, label, icon }: Props) => {
 
   return (
     <button
-      className={`flex space-x-2 items-center text-tertiary hover:text-fourth text-left p-4 duration-150 transition-all opacity-0 w-full hover:bg-fourth/ m-2 rounded-lg group hover:bg-secondary/20 ${
+      className={`flex space-x-2 items-center text-tertiary hover:text-fourth text-left duration-150 transition-all opacity-0 w-full hover:bg-fourth/ p-4 rounded-lg group hover:bg-secondary/20 ${
         isCurrentPath ? "bg-secondary/20 text-fourth" : ""
       }`}
       onClick={handleClick}

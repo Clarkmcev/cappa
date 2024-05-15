@@ -1,6 +1,8 @@
 import { ROUTE_CONTACT, ROUTE_PAINTINGS, ROUTE_ABOUT } from "../constants";
 import Button from "./Button";
 import { ImFilePicture } from "react-icons/im";
+import { FaUser } from "react-icons/fa";
+import { IoIosInformationCircle } from "react-icons/io";
 import { animate } from "framer-motion";
 import { useAnimate, stagger } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -33,8 +35,8 @@ function useMenuAnimation(isRendered: boolean) {
 function SideBar() {
   const sideBarButtons: Link[] = [
     { path: ROUTE_PAINTINGS, label: "Paintings", icon: <ImFilePicture /> },
-    { path: ROUTE_CONTACT, label: "Contact", icon: <ImFilePicture /> },
-    { path: ROUTE_ABOUT, label: "About", icon: <ImFilePicture /> },
+    { path: ROUTE_CONTACT, label: "Contact", icon: <FaUser /> },
+    { path: ROUTE_ABOUT, label: "About", icon: <IoIosInformationCircle /> },
   ];
   const [isRendered, setIsRendered] = useState<boolean>(false);
 
@@ -49,12 +51,9 @@ function SideBar() {
   }, []);
 
   return (
-    <div
-      className="bg-primary h-screen flex flex-col fixed border-4 border-y-transparent border-l-transparent border-r-secondary"
-      ref={scope}
-    >
-      {/* <div className="">This is Cappa Houze</div> */}
-      <div>
+    <div className="bg-primary w-64 h-full fixed flex flex-col p-2" ref={scope}>
+      <div className="py-4 ml-10 text-fourth font-bold">Cappa Houze</div>
+      <div className="flex flex-col space-y-2">
         {sideBarButtons.map((route: Link) => {
           return (
             <Button route={route.path} label={route.label} icon={route.icon} />

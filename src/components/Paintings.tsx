@@ -15,7 +15,7 @@ function Paintings() {
   return (
     <div className="bg-primary w-full">
       <div className="grid grid-cols-2">
-        {paintings.map((painting) => (
+        {/* {paintings.map((painting) => (
           <div
             key={painting.id}
             className="hover:cursor-pointer duration-150 border-none bg-secondary p-4"
@@ -26,7 +26,7 @@ function Paintings() {
               className="w-full h-full object-cover rounded-md"
             />
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );

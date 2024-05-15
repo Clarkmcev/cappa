@@ -11,15 +11,21 @@ function App() {
   return (
     <div className="h-full bg-primary">
       <BrowserRouter>
-        <SideBar />
-        <div className="pl-64">
-          <Routes>
-            <Route path={"/"} element={<Layout />} />
-            <Route path={ROUTE_PAINTINGS} element={<Paintings />} />
-            <Route path={ROUTE_CONTACT} element={<Contact />} />
-            <Route path={ROUTE_ABOUT} element={<About />} />
-          </Routes>
+        <div className="flex h-screen bg-gray-100">
+          <SideBar />
+          <div className="flex-grow ml-64 bg-blue-400">
+            <Routes>
+              <Route path={"/"} element={<Layout />} />
+              <Route path={ROUTE_PAINTINGS} element={<Paintings />} />
+              <Route path={ROUTE_CONTACT} element={<Contact />} />
+              <Route path={ROUTE_ABOUT} element={<About />} />
+            </Routes>
+          </div>
         </div>
+        {/* <div className="flex h-screen bg-gray-100">
+          <div className="w-64 fixed bg-red-500 h-full">Sidebar</div>
+          <div className="flex-grow ml-64 bg-blue-400">content</div>
+        </div> */}
       </BrowserRouter>
     </div>
   );
