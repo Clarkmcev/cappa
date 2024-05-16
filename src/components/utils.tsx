@@ -8,7 +8,7 @@ export const paintings = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
   },
   {
-    id: 1,
+    id: 2,
     title: "The Starry Night",
     artist: "Vincent van Gogh",
     year: 1889,
@@ -16,7 +16,7 @@ export const paintings = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
   },
   {
-    id: 1,
+    id: 3,
     title: "The Starry Night",
     artist: "Vincent van Gogh",
     year: 1889,
@@ -24,7 +24,7 @@ export const paintings = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
   },
   {
-    id: 1,
+    id: 4,
     title: "The Starry Night",
     artist: "Vincent van Gogh",
     year: 1889,
@@ -32,7 +32,7 @@ export const paintings = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
   },
   {
-    id: 1,
+    id: 5,
     title: "The Starry Night",
     artist: "Vincent van Gogh",
     year: 1889,
@@ -40,7 +40,7 @@ export const paintings = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
   },
   {
-    id: 1,
+    id: 6,
     title: "The Starry Night",
     artist: "Vincent van Gogh",
     year: 1889,
@@ -48,7 +48,7 @@ export const paintings = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
   },
   {
-    id: 1,
+    id: 7,
     title: "The Starry Night",
     artist: "Vincent van Gogh",
     year: 1889,
@@ -56,7 +56,7 @@ export const paintings = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
   },
   {
-    id: 1,
+    id: 8,
     title: "The Starry Night",
     artist: "Vincent van Gogh",
     year: 1889,
