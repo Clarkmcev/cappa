@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <div className="flex h-screen bg-gray-100">
           <SideBar />
-          <div className="flex-grow ml-64 bg-blue-400">
+          <div className="flex-grow ml-64 bg-fourth">
             <Routes>
               <Route path={"/"} element={<Layout />} />
               <Route path={ROUTE_PAINTINGS} element={<Paintings />} />
@@ -22,10 +22,6 @@ function App() {
             </Routes>
           </div>
         </div>
-        {/* <div className="flex h-screen bg-gray-100">
-          <div className="w-64 fixed bg-red-500 h-full">Sidebar</div>
-          <div className="flex-grow ml-64 bg-blue-400">content</div>
-        </div> */}
       </BrowserRouter>
     </div>
   );
