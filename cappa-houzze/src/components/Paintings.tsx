@@ -19,7 +19,7 @@ function Paintings() {
   const scope = useMenuAnimation(isRendered, "section");
 
   return (
-    <div ref={scope} className="bg-tertiary w-full">
+    <div ref={scope} className="bg-tertiary w-full h-screen overflow-scroll">
       <div className="grid grid-cols-2">
         {paintings.map((painting, index) => (
           <Painting index={index} data={painting} />

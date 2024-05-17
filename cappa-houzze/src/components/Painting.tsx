@@ -7,22 +7,19 @@ interface Props {
 
 function Painting({ index, data }: Props) {
   return (
-    <section
-      key={index}
-      className="w-3/4 opacity-0 duration-150 hover:border p-10"
-    >
+    <section key={index} className="opacity-0 duration-150 p-1">
       <img
         src={data.image}
         alt={data.title}
-        className="h-full object-cover rounded-md scale-100 hover:scale-100 transform transition-all"
+        className="h-full w-full object-cover rounded-md scale-100 hover:scale-100 transform transition-all"
       />
-      <div className="flex space-x-4 items-center justify-between p-4 bg-fourth/40 rounded-b-lg">
+      {/* <div className="flex space-x-4 items-center justify-between p-4 bg-fourth/40 rounded-b-lg">
         <div className="flex space-x-2 items-center">
           <h2 className="text-primary">{data.title}</h2>
           <p className="bg-primary px-2 rounded-lg text-fourth">Sold</p>
         </div>
         <LikeButton />
-      </div>
+      </div> */}
     </section>
   );
 }
