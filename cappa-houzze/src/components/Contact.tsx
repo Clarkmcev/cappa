@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useMenuAnimation } from "../animation/utils";
+import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
+import { IoMailSharp } from "react-icons/io5";
 
 function Contact() {
   const [isRendered, setIsRendered] = useState<boolean>(false);
@@ -13,9 +15,13 @@ function Contact() {
     };
   }, []);
 
+  const handleOnClick = () => {
+    console.log("Clicked");
+  };
+
   return (
     <div ref={scope} className="p-5 flex space-y-4 flex-col">
-      <div className="opacity-0 text-primary font-bold pb-4 border-b-primary/20 border border-x-transparent border-t-transparent">
+      <div className="opacity-0 text-primary font-bold pb-4 border-b-primary/20 border-b-2">
         This is the tile
       </div>
       <div className="opacity-0 text-primary">
@@ -23,6 +29,11 @@ function Contact() {
         similique quibusdam quo dignissimos, explicabo quis sunt quisquam in, a
         incidunt earum temporibus molestias, sint nostrum adipisci fuga dolore
         eum!
+      </div>
+      <div className="flex space-x-2">
+        <FaInstagramSquare onClick={handleOnClick} className="text-secondary" />
+        <FaFacebookSquare onClick={handleOnClick} className="text-secondary" />
+        <IoMailSharp onClick={handleOnClick} className="text-secondary" />
       </div>
     </div>
   );

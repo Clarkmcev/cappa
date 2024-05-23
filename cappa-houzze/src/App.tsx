@@ -4,7 +4,6 @@ import Paintings from "./components/Paintings";
 import { ROUTE_PAINTINGS, ROUTE_CONTACT, ROUTE_ABOUT } from "./constants";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import Layout from "./components/Layout";
 import SideBar from "./components/SideBar";
 
 function App() {
@@ -15,7 +14,7 @@ function App() {
           <SideBar />
           <div className="flex-grow ml-64 bg-fourth">
             <Routes>
-              <Route path={"/"} element={<Layout />} />
+              <Route path={"/"} element={<Paintings />} />
               <Route path={ROUTE_PAINTINGS} element={<Paintings />} />
               <Route path={ROUTE_CONTACT} element={<Contact />} />
               <Route path={ROUTE_ABOUT} element={<About />} />
