@@ -44,7 +44,7 @@ function SideBar() {
   return (
     <div className="bg-primary w-64 h-full fixed flex flex-col p-2" ref={scope}>
       <div className="py-4 ml-10 text-fourth font-bold">Cappa Houze</div>
-      <div className="flex flex-col space-y-2">
+      <div className="flex flex-col space-y-2 mt-44">
         {sideBarButtons.map((route: Link, index: number) => {
           return (
             <Button
