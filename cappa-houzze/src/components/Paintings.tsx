@@ -20,7 +20,7 @@ function Paintings() {
 
   return (
     <div ref={scope} className="bg-tertiary w-full h-screen overflow-scroll">
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-3">
         {paintings.map((painting, index) => (
           <Painting index={index} data={painting} />
         ))}

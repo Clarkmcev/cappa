@@ -1,5 +1,4 @@
-import LikeButton from "./LikeButton";
-
+// import { Splide, SplideSlide } from "@splidejs/react-splide";
 interface Props {
   data: any;
   index: number;
@@ -11,15 +10,8 @@ function Painting({ index, data }: Props) {
       <img
         src={data.image}
         alt={data.title}
-        className="h-full w-full object-cover rounded-md scale-100 hover:scale-100 transform transition-all"
+        className="p-4 h-full w-full rounded-md hover:scale-100 transform transition-all"
       />
-      {/* <div className="flex space-x-4 items-center justify-between p-4 bg-fourth/40 rounded-b-lg">
-        <div className="flex space-x-2 items-center">
-          <h2 className="text-primary">{data.title}</h2>
-          <p className="bg-primary px-2 rounded-lg text-fourth">Sold</p>
-        </div>
-        <LikeButton />
-      </div> */}
     </section>
   );
 }
