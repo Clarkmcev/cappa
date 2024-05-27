@@ -20,9 +20,9 @@ function Contact() {
   };
 
   return (
-    <div ref={scope} className="p-5 flex space-y-4 flex-col">
+    <div ref={scope} className="p-5 flex space-y-4 flex-col max-w-3xl">
       <div className="opacity-0 text-primary font-bold pb-4 border-b-primary/20 border-b-2">
-        This is the tile
+        About me
       </div>
       <div className="opacity-0 text-primary">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam vero

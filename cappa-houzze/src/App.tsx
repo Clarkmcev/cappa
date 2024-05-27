@@ -1,10 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 import Paintings from "./components/Paintings";
-import { ROUTE_PAINTINGS, ROUTE_CONTACT, ROUTE_ABOUT } from "./constants";
+import {
+  ROUTE_PAINTINGS,
+  ROUTE_CONTACT,
+  ROUTE_ABOUT,
+  ROUTE_EVENTS,
+  ROUTE_PROJECTS,
+  ROUTE_BIO,
+} from "./constants";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import SideBar from "./components/SideBar";
+import Events from "./components/Events";
+import Projects from "./components/Projects";
+import Bio from "./components/Bio";
 
 function App() {
   return (
@@ -16,8 +26,10 @@ function App() {
             <Routes>
               <Route path={"/"} element={<Paintings />} />
               <Route path={ROUTE_PAINTINGS} element={<Paintings />} />
+              <Route path={ROUTE_EVENTS} element={<Events />} />
+              <Route path={ROUTE_PROJECTS} element={<Projects />} />
+              <Route path={ROUTE_BIO} element={<Bio />} />
               <Route path={ROUTE_CONTACT} element={<Contact />} />
-              <Route path={ROUTE_ABOUT} element={<About />} />
             </Routes>
           </div>
         </div>
