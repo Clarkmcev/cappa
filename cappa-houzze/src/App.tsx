@@ -4,13 +4,11 @@ import Paintings from "./components/Paintings";
 import {
   ROUTE_PAINTINGS,
   ROUTE_CONTACT,
-  ROUTE_ABOUT,
   ROUTE_EVENTS,
   ROUTE_PROJECTS,
   ROUTE_BIO,
 } from "./constants";
 import Contact from "./components/Contact";
-import About from "./components/About";
 import SideBar from "./components/SideBar";
 import Events from "./components/Events";
 import Projects from "./components/Projects";

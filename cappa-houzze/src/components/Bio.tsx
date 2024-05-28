@@ -16,15 +16,18 @@ function Bio() {
   }, []);
 
   return (
-    <section ref={scope} className="p-5 flex space-y-4 flex-col max-w-3xl">
-      <div className="opacity-0 text-primary font-bold pb-4 border-b-primary/20 border border-x-transparent border-t-transparent">
+    <section
+      ref={scope}
+      className="p-5 flex space-y-4 flex-col max-w-3xl font-serif"
+    >
+      <div className="opacity-0 text-primary font-bold pb-4 border-b-primary/20 border border-x-transparent border-t-transparent text-2xl">
         BIO
       </div>
-      <div className="opacity-0 text-primary">
+      <div className="opacity-0 text-primary text-lg">
         Love creating events, collaborating with other artists, music,
         etc......... if you into it hit me up
       </div>
-      <div className="flex-col space-y-4 opacity-0 text-primary">
+      <div className="flex-col space-y-4 opacity-0 text-primary text-lg">
         <div className="opacity-0">
           Amanda McEvoy, french/american who grew up in Alsace. Discovered
           painting with my dear childhood friend just before highschool and
