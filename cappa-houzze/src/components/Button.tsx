@@ -6,11 +6,9 @@ interface Props {
   label: string;
   icon: React.ReactNode;
 }
-
 const Button: React.FC<Props> = ({ route, label, icon }: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
-
   const handleClick = () => {
     navigate(route);
   };
@@ -24,9 +22,7 @@ const Button: React.FC<Props> = ({ route, label, icon }: Props) => {
       }`}
       onClick={handleClick}
     >
-      <section className="group-hover:-translate-y-0.5 duration-150 transition-all  mr-2">
-        {icon}
-      </section>
+      <section className="duration-150 transition-all mr-2">{icon}</section>
       <p
         className={`group-hover:text-fourth text-xl ${
           isCurrentPath && "text-fourth"

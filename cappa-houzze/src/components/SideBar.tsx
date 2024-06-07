@@ -1,21 +1,9 @@
-import {
-  ROUTE_CONTACT,
-  ROUTE_PAINTINGS,
-  ROUTE_PROJECTS,
-  ROUTE_BIO,
-  ROUTE_EVENTS,
-} from "../constants";
+import { ROUTE_CONTACT, ROUTE_PAINTINGS, ROUTE_BIO } from "../constants";
 import Button from "./Button";
-import {
-  FaPaintBrush,
-  FaInstagramSquare,
-  FaUser,
-  FaCalendar,
-} from "react-icons/fa";
+import { FaPaintBrush, FaUser } from "react-icons/fa";
 import { IoIosInformationCircle } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { useMenuAnimation } from "../animation/utils";
-import { PiProjectorScreenFill } from "react-icons/pi";
 import { IoMdMail } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 
@@ -28,12 +16,6 @@ type Link = {
 function SideBar() {
   const sideBarButtons: Link[] = [
     { path: ROUTE_PAINTINGS, label: "Paintings", icon: <FaPaintBrush /> },
-    // { path: ROUTE_EVENTS, label: "Events", icon: <FaCalendar /> },
-    // {
-    //   path: ROUTE_PROJECTS,
-    //   label: "Projects",
-    //   icon: <PiProjectorScreenFill />,
-    // },
     { path: ROUTE_BIO, label: "Bio", icon: <FaUser /> },
     { path: ROUTE_CONTACT, label: "Contact", icon: <IoIosInformationCircle /> },
   ];
@@ -55,8 +37,8 @@ function SideBar() {
         Amanda McEvoy
       </div>
       <div className="flex flex-col space-y-2 my-auto font-serif h-full">
-        <div className="flex flex-col justify-between h-full mt-44">
-          <div>
+        <div className="flex flex-col justify-between h-full mt-4">
+          <div className="flex flex-col space-y-2">
             {sideBarButtons.map((route: Link, index: number) => {
               return (
                 <Button
@@ -70,12 +52,12 @@ function SideBar() {
           </div>
           <div className="flex items-center space-x-2 m-4">
             <RiInstagramFill
-              size={40}
+              size={30}
               onClick={handleOnClick}
               className="text-tertiary hover:text-secondary cursor-pointer "
             />
             <IoMdMail
-              size={40}
+              size={30}
               onClick={handleOnClick}
               className="text-tertiary hover:text-secondary cursor-pointer"
             />

@@ -16,7 +16,7 @@ function Contact() {
   return (
     <div
       ref={scope}
-      className="font-serif p-5 flex space-y-4 flex-col max-w-3xl"
+      className="font-serif flex space-y-4 flex-col max-w-7xl p-4"
     >
       <div className="opacity-0 text-primary font-bold pb-4 border-b-primary/20 border-b-2 text-2xl">
         About me
