@@ -14,6 +14,7 @@ import Events from "./components/Events";
 import Projects from "./components/Projects";
 import Bio from "./components/Bio";
 
+// To be fed
 function App() {
   return (
     <div className="h-full bg-primary">
