@@ -27,8 +27,8 @@ function SideBar() {
     setIsRendered(true);
   }, []);
 
-  const handleOnClick = () => {
-    console.log("here");
+  const handleOnClick = (url: string) => {
+    window.location.href = url;
   };
 
   return (
@@ -53,12 +53,14 @@ function SideBar() {
           <div className="flex items-center space-x-2 m-4">
             <RiInstagramFill
               size={30}
-              onClick={handleOnClick}
+              onClick={() =>
+                handleOnClick("https://www.instagram.com/amanda_mcevoy_art/")
+              }
               className="text-tertiary hover:text-secondary cursor-pointer "
             />
             <IoMdMail
               size={30}
-              onClick={handleOnClick}
+              onClick={() => handleOnClick("mailto:")}
               className="text-tertiary hover:text-secondary cursor-pointer"
             />
           </div>
