@@ -1,4 +1,3 @@
-// import { Splide, SplideSlide } from "@splidejs/react-splide";
 interface Props {
   data: any;
   index: number;
@@ -6,11 +5,11 @@ interface Props {
 
 function Painting({ index, data }: Props) {
   return (
-    <section key={index} className="opacity-0 duration-150 p-1">
+    <section key={index} className="duration-150 p-1">
       <img
         src={data.image}
         alt={data.title}
-        className="p-4 h-full w-full rounded-md hover:scale-100 transform transition-all"
+        className="h-screen rounded-md hover:scale-100 transform transition-all"
       />
     </section>
   );

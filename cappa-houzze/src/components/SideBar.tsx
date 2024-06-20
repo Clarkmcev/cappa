@@ -56,7 +56,7 @@ function SideBar() {
               onClick={() =>
                 handleOnClick("https://www.instagram.com/amanda_mcevoy_art/")
               }
-              className="text-tertiary hover:text-secondary cursor-pointer "
+              className="text-tertiary hover:text-secondary cursor-pointer"
             />
             <IoMdMail
               size={30}

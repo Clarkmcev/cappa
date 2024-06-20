@@ -3,9 +3,8 @@ import Painting from "./Painting";
 
 function Paintings() {
   return (
-    <div ref={null} className="bg-tertiary w-full h-screen overflow-scroll">
-      {/*  Paintings */}
-      <div className="grid grid-cols-3">
+    <div ref={null} className="w-full h-screen overflow-scroll">
+      <div className="flex">
         {paintings.map((painting, index) => (
           <Painting index={index} data={painting} />
         ))}
