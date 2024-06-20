@@ -9,6 +9,7 @@ function Painting({ index, data }: Props) {
       <img
         src={data.image}
         alt={data.title}
+        onClick={() => console.log(data.title)}
         className="object-cover max-h-screen mx-auto fit-cover rounded-xl border-tertiary border hover:scale-100 transform transition-all cursor-pointer hover:opacity-95 hover:-translate-y-2"
       />
     </section>
