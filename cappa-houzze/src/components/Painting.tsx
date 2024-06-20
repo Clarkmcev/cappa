@@ -5,11 +5,11 @@ interface Props {
 
 function Painting({ index, data }: Props) {
   return (
-    <section key={index} className="duration-150 p-1">
+    <section key={index} className="duration-150 p-4">
       <img
         src={data.image}
         alt={data.title}
-        className="h-screen rounded-md hover:scale-100 transform transition-all"
+        className="object-cover fit-cover rounded-md hover:scale-100 transform transition-all"
       />
     </section>
   );
