@@ -19,21 +19,21 @@ function SideBar() {
     { path: ROUTE_BIO, label: "Bio", icon: <FaUser /> },
     { path: ROUTE_CONTACT, label: "Contact", icon: <IoIosInformationCircle /> },
   ];
-  const [isRendered, setIsRendered] = useState<boolean>(false);
+  // const [isRendered, setIsRendered] = useState<boolean>(false);
 
-  const scope = useMenuAnimation(isRendered, "button");
+  // const scope = useMenuAnimation(isRendered, "button");
 
-  useEffect(() => {
-    setIsRendered(true);
-  }, []);
+  // useEffect(() => {
+  //   setIsRendered(true);
+  // }, []);
 
   const handleOnClick = (url: string) => {
     window.location.href = url;
   };
 
   return (
-    <div className="bg-primary w-64 h-full fixed flex flex-col p-2" ref={scope}>
-      <div className="py-4 pl-4 text-fourth border-x-transparent border-t-transparent font-bold border-solid border-2 border-b-secondary/40 text-2xl font-serif">
+    <div className="bg-secondary w-64 h-full fixed flex flex-col p-2 border-r-4 border-tertiary/20">
+      <div className="py-4 pl-4 text-fourth border-x-transparent border-t-transparent font-bold border-solid border-2 border-b-fourth text-2xl font-serif">
         Amanda McEvoy
       </div>
       <div className="flex flex-col space-y-2 my-auto font-serif h-full">
@@ -56,12 +56,12 @@ function SideBar() {
               onClick={() =>
                 handleOnClick("https://www.instagram.com/amanda_mcevoy_art/")
               }
-              className="text-tertiary hover:text-secondary cursor-pointer"
+              className="text-fourth hover:text-tertiary cursor-pointer"
             />
             <IoMdMail
               size={30}
               onClick={() => handleOnClick("mailto:")}
-              className="text-tertiary hover:text-secondary cursor-pointer"
+              className="text-fourth hover:text-tertiary cursor-pointer"
             />
           </div>
         </div>
