@@ -17,17 +17,17 @@ const Button: React.FC<Props> = ({ route, label, icon }: Props) => {
 
   return (
     <button
-      className={`flex space-x-2 items-center text-tertiary  text-left duration-150 transition-all opacity-100 w-full bg-fourth/10  p-4 rounded-lg group ${
-        isCurrentPath ? "bg-fourth/40 text-fourth" : ""
+      className={`flex space-x-2 items-center text-tertiary hover:bg-fourth/10 text-left duration-150 transition-all opacity-100 w-full bg-fourth/10  p-4 rounded-lg group ${
+        isCurrentPath ? "bg-fourth/10 text-fourth" : "bg-transparent"
       }`}
       onClick={handleClick}
     >
-      <section className="duration-150 transition-all mr-2 text-primary">
+      <section className="duration-150 transition-all mr-2 text-fourth">
         {icon}
       </section>
       <p
-        className={`group-hover:text-fourth font-bold text-xl ${
-          isCurrentPath ? "text-primary" : "text-fourth"
+        className={`group-hover:text-fourth text-xl ${
+          isCurrentPath ? "text-fourth" : "text-fourth"
         }`}
       >
         {label}

@@ -16,7 +16,7 @@ function Contact() {
   return (
     <section
       ref={scope}
-      className="p-5 flex space-y-4 flex-col max-w-3xl font-serif"
+      className="bg-primary/10 h-full w-full p-5 flex space-y-4 flex-col max-w-3xl font-serif"
     >
       <div className="opacity-0 text-primary font-bold pb-4 border-b-primary/20 border border-x-transparent border-t-transparent text-2xl">
         Contact

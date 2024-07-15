@@ -17,11 +17,11 @@ import Bio from "./components/Bio";
 // To be fed
 function App() {
   return (
-    <div className="h-full bg-primary">
+    <div className="h-full">
       <BrowserRouter>
-        <div className="flex h-screen bg-gray-100">
+        <div className="flex h-screen">
           <SideBar />
-          <div className="flex-grow ml-64 bg-fourth">
+          <div className="flex-grow ml-64 bg-primary/20">
             <Routes>
               <Route path={"/"} element={<Paintings />} />
               <Route path={ROUTE_PAINTINGS} element={<Paintings />} />

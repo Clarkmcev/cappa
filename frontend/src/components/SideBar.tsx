@@ -24,12 +24,12 @@ function SideBar() {
 
   return (
     <div className="bg-secondary w-64 h-full fixed flex flex-col p-2 border-r-4 border-tertiary/20">
-      <div className="py-4 pl-4 text-fourth border-x-transparent border-t-transparent font-bold border-solid border-2 border-b-fourth text-2xl font-serif">
+      <div className="py-4 pl-4 text-fourth border-x-transparent border-t-transparent border-solid border-2 border-b-fourth/20 text-2xl font-serif">
         Amanda McEvoy
       </div>
       <div className="flex flex-col space-y-2 my-auto font-serif h-full">
         <div className="flex flex-col justify-between h-full mt-4">
-          <div className="flex flex-col space-y-2">
+          <div className="flex flex-col space-y-2 mt-44">
             {sideBarButtons.map((route: Link, index: number) => {
               return (
                 <Button
