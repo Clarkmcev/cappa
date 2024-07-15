@@ -1,0 +1,10 @@
+:80
+
+root * /srv
+file_server
+
+# Rewrite for React Router: serve index.html for all non-file requests
+@notFile {
+    not path_regexp file ^\/.*\..+$
+}
+rewrite @notFile /index.html
