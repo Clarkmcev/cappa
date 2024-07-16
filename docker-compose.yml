@@ -2,18 +2,7 @@ version: "3.8"
 networks:
   caddy:
 services:
-  frontend:
-    container_name: frontend
-    restart: unless-stopped
-    build:
-      dockerfile: ./docker/frontend/Dockerfile
-      context: ./frontend
-    expose:
-      - "80"
-    tty: true
   caddy:
-    depends_on:
-      - frontend
     container_name: caddy
     build:
       dockerfile: ./docker/caddy/Dockerfile
