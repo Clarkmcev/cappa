@@ -1,4 +1,6 @@
 #!/bin/bash
 
 echo "Building the frontend"
-docker buildx build . --tag frontend/src --file ../frontend/Dockerfile
+cd ./../
+docker-compose up
+# docker buildx build . --tag frontend/src --file ../frontend/Dockerfile
