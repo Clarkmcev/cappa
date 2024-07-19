@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Building the frontend"
-cd ./../
-docker-compose up
-# docker buildx build . --tag frontend/src --file ../frontend/Dockerfile
+# sourcing variables
+source .env
+echo "Building the frontend: ${STUDIO_FRONTEND_IMAGE}"
+docker buildx build ./frontend --tag ${STUDIO_FRONTEND_IMAGE} --file ./frontend/Dockerfile

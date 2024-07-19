@@ -3,10 +3,7 @@ networks:
   caddy:
 services:
   caddy:
-    container_name: caddy
-    build:
-      dockerfile: ./docker/caddy/Dockerfile
-      context: ./frontend
+    image: ${STUDIO_FRONTEND_IMAGE}
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
     ports:
