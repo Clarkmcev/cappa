@@ -2,5 +2,3 @@ amanda-mcstudio.com
 
 root * /www
 file_server
-
-# Automatic HTTPS is enabled by default

@@ -1,5 +1,5 @@
-import { paintings } from "./utils";
-import Painting from "./Painting";
+// import { paintings } from "./utils";
+// import Painting from "./Painting";
 
 function Paintings() {
   return (
