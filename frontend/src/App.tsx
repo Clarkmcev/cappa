@@ -21,7 +21,7 @@ function App() {
       <BrowserRouter>
         <div className="flex h-screen">
           <SideBar />
-          <div className="flex-grow ml-64 bg-primary/20">
+          <div className={`flex-grow bg-primary/20 ml-64`}>
             <Routes>
               <Route path={"/"} element={<Paintings />} />
               <Route path={ROUTE_PAINTINGS} element={<Paintings />} />

@@ -1,17 +1,20 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { paintings } from "./utils";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Painting from "./Painting";
 
 function Carousel() {
   return (
-    <main className="w-screen">
+    <main className="h-screen w-screen">
       <Swiper
+        className="h-screen w-full"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
         slidesPerView={1}
@@ -21,10 +24,11 @@ function Carousel() {
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+        {paintings.map((painting, index) => (
+          <SwiperSlide>
+            <Painting index={index} data={painting} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </main>
   );
