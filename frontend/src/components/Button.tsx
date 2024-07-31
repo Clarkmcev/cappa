@@ -26,7 +26,7 @@ const Button: React.FC<Props> = ({ route, label, icon }: Props) => {
         {icon}
       </section>
       <p
-        className={`group-hover:text-fourth text-xl ${
+        className={`group-hover:text-fourth text-md font-bold ${
           isCurrentPath ? "text-fourth" : "text-fourth"
         }`}
       >

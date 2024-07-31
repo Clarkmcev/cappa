@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useMenuAnimation } from "../animation/utils";
 
-function Bio() {
+function Content() {
   useEffect(() => {}, []);
 
   const [isRendered, setIsRendered] = useState<boolean>(false);
@@ -18,7 +18,7 @@ function Bio() {
   return (
     <section
       ref={scope}
-      className="p-5 flex space-y-4 flex-col font-serif h-screen w-screen"
+      className="p-5 flex space-y-4 flex-col font-serif h-screen"
     >
       <div className="opacity-0 text-primary font-bold pb-4 border-b-primary/20 border border-x-transparent border-t-transparent text-2xl">
         BIO
@@ -41,4 +41,4 @@ function Bio() {
   );
 }
 
-export default Bio;
+export default Content;
