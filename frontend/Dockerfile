@@ -10,3 +10,5 @@ FROM caddy:2.2.1-alpine
 
 RUN mkdir -p /www
 COPY --from=build-stage /app/dist /www
+COPY ./Caddyfile /etc/caddy/Caddyfile
+RUN caddy fmt --overwrite /etc/caddy/Caddyfile
