@@ -50,12 +50,8 @@ function Painting({ index, data }: Props) {
           src={`../src/assets/${data.image}`}
           alt={data.title}
           onClick={() => navigate(`${ROUTE_PAINTINGS}/${data.id}`)}
-          className="max-h-[100vh] h-96 px-10 py-4 fit-cover border-tertiary transform transition-all cursor-pointer"
+          className="max-h-[100vh] px-10 py-4 fit-cover border-tertiary transform transition-all cursor-pointer hover:brightness-90 duration-300"
         />
-      </div>
-      <div className="px-10 flex space-x-4">
-        <p className="font-bold text-primary">{data.title}</p>
-        <p className="text-primary">Sold</p>
       </div>
     </section>
   );

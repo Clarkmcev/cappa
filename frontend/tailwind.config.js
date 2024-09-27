@@ -9,6 +9,10 @@ export default {
         tertiary: "#B7B7B7",
         fourth: "#705C53",
       },
+      fontFamily: {
+        sans: ['"Open Sans"', "sans-serif"],
+        serif: ['"Merriweather"', "serif"],
+      },
     },
   },
   plugins: [],

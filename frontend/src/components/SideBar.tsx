@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { ROUTE_CONTACT, ROUTE_PAINTINGS, ROUTE_BIO } from "../constants";
 import Button from "./Button";
 import { FaPaintBrush, FaUser } from "react-icons/fa";
@@ -22,8 +23,26 @@ function SideBar() {
     window.location.href = url;
   };
 
+  const boxRef = useRef<HTMLDivElement>(null);
+  const buttonRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const handleMouseEnter = (index: number) => {
+    if (boxRef.current && buttonRefs.current[index]) {
+      const rect = buttonRefs.current[index]?.getBoundingClientRect();
+      console.log(rect, index);
+      boxRef.current.style.top = `${rect.top}px`;
+      boxRef.current.style.height = `${rect.height}px`;
+    }
+  };
+
+  const handleMouseLeave = () => {
+    // if (boxRef.current) {
+    //   boxRef.current.style.backgroundColor = "yellow";
+    // }
+  };
+
   return (
-    <div className="bg-secondary w-64 h-full fixed flex flex-col p-2 border-r-4 border-tertiary/20">
+    <div className="bg-primary h-full fixed flex flex-col p-10 border-r-4 ">
       <div className="py-4 pl-4 text-fourth border-x-transparent border-t-transparent border-solid border-2 border-b-fourth/20 text-2xl font-serif">
         Amanda McEvoy
       </div>
@@ -32,15 +51,26 @@ function SideBar() {
           <div className="flex flex-col space-y-2 mt-44">
             {sideBarButtons.map((route: Link, index: number) => {
               return (
-                <Button
+                <div
+                  ref={(el) => (buttonRefs.current[index] = el)}
                   key={index}
-                  route={route.path}
-                  label={route.label}
-                  icon={route.icon}
-                />
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <Button
+                    key={index}
+                    route={route.path}
+                    label={route.label}
+                    icon={route.icon}
+                  />
+                </div>
               );
             })}
           </div>
+          <div
+            ref={boxRef}
+            className="absolute left-34 duration-[400ms] transition-all w-2 h-4 rounded-full bg-fourth/20"
+          ></div>
           <div className="flex items-center space-x-2 m-4">
             <RiInstagramFill
               size={30}
