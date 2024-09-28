@@ -14,14 +14,13 @@ import Projects from "./components/Projects";
 import Content from "./components/Content";
 import Carousel from "./components/Carousel";
 
-// To be fed
 function App() {
   return (
     <div className="h-full">
       <BrowserRouter>
         <div className="flex h-screen">
           <SideBar />
-          <div className={`flex-grow bg-primary/20 ml-64`}>
+          <div className={`flex-grow ml-72`}>
             <Routes>
               <Route path={"/"} element={<Paintings />} />
               <Route path={ROUTE_PAINTINGS} element={<Paintings />} />
