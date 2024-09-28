@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { ROUTE_CONTACT, ROUTE_PAINTINGS, ROUTE_BIO } from "../constants";
+import { ROUTE_CONTACT, ROUTE_PAINTINGS, ROUTE_BIO } from "../../constants";
 import Button from "./Button";
 import { FaPaintBrush, FaUser } from "react-icons/fa";
 import { IoIosInformationCircle } from "react-icons/io";
@@ -25,7 +25,6 @@ function SideBar() {
   const moveCursor = (index: number) => {
     if (boxRef.current && buttonRefs.current[index]) {
       const rect = buttonRefs.current[index]?.getBoundingClientRect();
-      console.log(rect, index);
       boxRef.current.style.top = `${rect.top}px`;
       boxRef.current.style.height = `${rect.height}px`;
     }
@@ -65,12 +64,12 @@ function SideBar() {
   };
 
   useEffect(() => {
-    getIndexOfCurrentRoute();
+    moveCursor(getIndexOfCurrentRoute());
   }, []);
 
   return (
-    <div className="bg-primary h-full fixed flex flex-col p-10 border-r-4 ">
-      <div className="py-4 pl-4 text-fourth font-sans border-x-transparent border-t-transparent border-solid border-2 border-b-fourth/20 text-2xl">
+    <div className="bg-primary h-full fixed flex flex-col p-10 z-50">
+      <div className="py-4 pl-4 text-fourth font-bold font-custom border-x-transparent border-t-transparent border-solid border-2 border-b-fourth/20 text-2xl">
         Amanda McStudio
       </div>
       <div className="flex flex-col space-y-2 my-auto font-serif h-full">

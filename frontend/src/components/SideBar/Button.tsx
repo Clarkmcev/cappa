@@ -17,7 +17,7 @@ const Button: React.FC<Props> = ({ route, label }: Props) => {
 
   return (
     <button
-      className={`flex space-x-2 font-sans items-center text-tertiary  text-left duration-150 transition-all opacity-100 w-full group p-4 rounded-lg group ${
+      className={`flex space-x-2 font-custom items-center text-tertiary text-left duration-150 transition-all opacity-100 w-full group p-4 rounded-lg group ${
         isCurrentPath ? "text-fourth" : "bg-transparent"
       }`}
       onClick={handleClick}

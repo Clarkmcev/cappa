@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ROUTE_PAINTINGS } from "../constants";
+import { ROUTE_PAINTINGS } from "../../constants";
 
 interface Props {
   data: any;
@@ -23,7 +23,7 @@ function Painting({ index, data }: Props) {
           }
         });
       },
-      { threshold: 0.15 } // Adjust the threshold as needed
+      { threshold: 0.15 }
     );
 
     if (imgRef.current) {

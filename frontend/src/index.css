@@ -1,3 +1,43 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@font-face {
+  font-family: "CustomFont";
+  src: url("./assets/Acherus.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "CustomFont", sans-serif;
+}
+
+.MuiFormLabel-root {
+  @apply text-primary/60 font-custom !important;
+}
+
+.MuiInputBase-input {
+  @apply text-primary font-custom !important;
+}
+
+.MuiInput-underline:before {
+  @apply border-primary/10 font-custom !important;
+}
+
+.MuiInput-underline:after {
+  @apply border-primary !important;
+}
+
+.MuiButtonBase-root {
+  @apply bg-primary text-fourth shadow-none hover:bg-fourth hover:text-primary hover:border-primary border-solid border-fourth border !important;
+}
+
+/* Hide scrollbars for all elements */
+*::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+}
+
+* {
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
