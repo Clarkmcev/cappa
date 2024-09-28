@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
-import Paintings from "./components/Paintings/Paintings";
+import Paintings from "./components/Paintings";
 import {
   ROUTE_PAINTINGS,
   ROUTE_CONTACT,
@@ -32,7 +32,6 @@ function App() {
               <Route path={ROUTE_PROJECTS} element={<Projects />} />
               <Route path={ROUTE_BIO} element={<Content />} />
               <Route path={ROUTE_CONTACT} element={<Contact />} />
-              {/* <Route path={ROUTE_CONTACT} element={<Carousel />} /> */}
             </Routes>
             <Toaster />
             <Background />
