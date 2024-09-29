@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { useMenuAnimation } from "../../animation/utils";
+// import { useScrollToTop } from "../utils";
 
 function Content() {
-  useEffect(() => {}, []);
-
   const [isRendered, setIsRendered] = useState<boolean>(false);
 
   const scope = useMenuAnimation(isRendered, "div");
+
+  // hooks
+  // useScrollToTop();
 
   useEffect(() => {
     setIsRendered(true);
@@ -18,7 +20,7 @@ function Content() {
   return (
     <section
       ref={scope}
-      className="p-5 flex space-y-4 flex-col font-sans m-20 xl:m-44 pb-20"
+      className="p-5 flex space-y-4 flex-col font-sans m-20 xl:m-44 pb-20 pl-64"
     >
       <div className="opacity-0 text-primary pb-4 text-4xl font-custom font-bold">
         About me

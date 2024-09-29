@@ -5,6 +5,7 @@ import { FaPaintBrush, FaUser } from "react-icons/fa";
 import { IoIosInformationCircle } from "react-icons/io";
 import { IoMdMail } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
+import Links from "./Links";
 
 type Link = {
   path: string;
@@ -97,20 +98,7 @@ function SideBar() {
             ref={boxRef}
             className="absolute left-34 duration-[400ms] transition-all w-2 h-4 rounded-full bg-fourth/20"
           ></div>
-          <div className="flex items-center space-x-2 m-4">
-            <RiInstagramFill
-              size={30}
-              onClick={() =>
-                handleOnClick("https://www.instagram.com/amanda_mcevoy_art/")
-              }
-              className="text-fourth/60 hover:text-fourth cursor-pointer duration-500 transition-all"
-            />
-            <IoMdMail
-              size={30}
-              onClick={() => handleOnClick("mailto:")}
-              className="text-fourth/60 hover:text-fourth cursor-pointer duration-500 transition-all"
-            />
-          </div>
+          <Links />
         </div>
       </div>
     </div>

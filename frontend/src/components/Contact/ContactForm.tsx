@@ -19,7 +19,6 @@ function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     toast.success("Form sent", {
       position: "bottom-center",
       style: {

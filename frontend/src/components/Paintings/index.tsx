@@ -1,11 +1,18 @@
-import { paintings } from "../utils";
+import { VARIANT_PAINTING_STANDARD } from "../../constants";
+import { paintings, useScrollToTop } from "../utils";
 import Painting from "./Painting";
 
 function Paintings() {
+  useScrollToTop();
+
   return (
-    <div className="grid md:grid-cols-1 xl:grid-cols-2">
+    <div className="grid md:grid-cols-1 xl:grid-cols-2 bg-primary pl-64">
       {paintings.map((painting, index) => (
-        <Painting index={index} data={painting} />
+        <Painting
+          variant={VARIANT_PAINTING_STANDARD}
+          index={index}
+          data={painting}
+        />
       ))}
     </div>
   );

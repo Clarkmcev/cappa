@@ -38,6 +38,10 @@ s .context h1 {
   height: 100vh;
 }
 
+.area.dark {
+  background: black !important;
+}
+
 .circles {
   position: absolute;
   top: 0;

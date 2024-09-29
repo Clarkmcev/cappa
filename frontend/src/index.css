@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
 @font-face {
   font-family: "CustomFont";
   src: url("./assets/Acherus.otf") format("opentype");
@@ -40,4 +41,17 @@ body {
 * {
   -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
   scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.swiper-pagination-bullet {
+  @apply bg-primary !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-fourth brightness-150 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-primary/60 hover:text-primary p-20 !important;
 }
