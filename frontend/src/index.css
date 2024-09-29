@@ -55,3 +55,11 @@ body {
 .swiper-button-next {
   @apply text-primary/60 hover:text-primary p-20 !important;
 }
+
+.MuiButton-root {
+  @apply font-custom lowercase font-bold !important;
+}
+
+.MuiSvgIcon-root {
+  @apply text-primary/60 hover:text-primary cursor-pointer duration-500 transition-all !important;
+}

@@ -48,7 +48,7 @@ function PaintingsViewer() {
           onClick={() => navigate(ROUTE_PAINTINGS)}
         >
           <ArrowBackIcon className="text-primary" />
-          <p>Home</p>
+          <p className="lowercase font-custom">Home</p>
         </button>
       </div>
       <Background isDark={true} />

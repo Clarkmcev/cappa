@@ -1,25 +1,11 @@
 import { useEffect, useRef } from "react";
-import { ROUTE_CONTACT, ROUTE_PAINTINGS, ROUTE_BIO } from "../../constants";
 import Button from "./Button";
-import { FaPaintBrush, FaUser } from "react-icons/fa";
-import { IoIosInformationCircle } from "react-icons/io";
-import { IoMdMail } from "react-icons/io";
-import { RiInstagramFill } from "react-icons/ri";
+
+import Logo from "../Atoms/Logo";
+import { Link, sideBarButtons } from "./utils";
 import Links from "./Links";
 
-type Link = {
-  path: string;
-  label: string;
-  icon: React.ReactNode;
-};
-
 function SideBar() {
-  const sideBarButtons: Link[] = [
-    { path: ROUTE_PAINTINGS, label: "Paintings", icon: <FaPaintBrush /> },
-    { path: ROUTE_BIO, label: "About me", icon: <FaUser /> },
-    { path: ROUTE_CONTACT, label: "Contact", icon: <IoIosInformationCircle /> },
-  ];
-
   const boxRef = useRef<HTMLDivElement>(null);
   const buttonRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -29,10 +15,6 @@ function SideBar() {
       boxRef.current.style.top = `${rect.top}px`;
       boxRef.current.style.height = `${rect.height}px`;
     }
-  };
-
-  const handleOnClick = (url: string) => {
-    window.location.href = url;
   };
 
   const getIndexOfCurrentRoute = () => {
@@ -69,10 +51,8 @@ function SideBar() {
   }, []);
 
   return (
-    <div className="bg-primary h-full fixed flex flex-col p-10 z-50">
-      <div className="py-4 pl-4 text-fourth font-bold font-custom border-x-transparent border-t-transparent border-solid border-2 border-b-fourth/20 text-2xl">
-        Amanda McStudio
-      </div>
+    <div className="hidden md:flex bg-primary h-full fixed flex-col p-10 z-50">
+      <Logo />
       <div className="flex flex-col space-y-2 my-auto font-serif h-full">
         <div className="flex flex-col justify-between h-full mt-4">
           <div className="flex flex-col space-y-2 mt-44">
