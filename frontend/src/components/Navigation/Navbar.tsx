@@ -1,10 +1,18 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "../Atoms/Logo";
 import { FormControl, MenuItem, Select } from "@mui/material";
+import { Link, sideBarButtons } from "./utils";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
+
+  const handleClick = (route: string) => {
+    navigate(route);
+  };
+
   return (
-    <div className="md:hidden w-full flex items-center justify-between px-4 absolute">
+    <div className="md:hidden w-full flex items-center justify-between px-4 bg-fourth fixed z-50 border border-primary/10 border-x-transparent border-t-transparent border-b-2">
       <Logo isNav={true} />
       <FormControl variant="standard">
         <Select
@@ -14,10 +22,19 @@ function Navbar() {
           id="demo-simple-select"
           value={12}
           label="Age"
+          inputProps={{ disableUnderline: true }} // Disable underline
         >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          {sideBarButtons.map((route: Link, index: number) => {
+            return (
+              <MenuItem
+                key={index}
+                value={route.path}
+                onClick={() => handleClick(route.path)}
+              >
+                {route.label}
+              </MenuItem>
+            );
+          })}
         </Select>
       </FormControl>
     </div>

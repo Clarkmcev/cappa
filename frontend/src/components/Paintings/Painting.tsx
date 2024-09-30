@@ -75,7 +75,7 @@ function Painting({ index, data, variant }: Props) {
           key={index}
           ref={imgRef}
           className={`${
-            isInView ? "opacity-100  translate-x-2" : "opacity-0"
+            isInView ? "opacity-100 translate-x-0" : "opacity-0"
           } duration-[400ms] transition-all`}
         >
           <div className="overflow-hidden">
@@ -83,7 +83,7 @@ function Painting({ index, data, variant }: Props) {
               src={`../src/assets/${data.image}`}
               alt={data.title}
               onClick={() => navigate(`${ROUTE_PAINTINGS}/${data.id}`)}
-              className="max-h-[100vh] px-10 py-4 fit-cover border-tertiary transform transition-all cursor-pointer hover:brightness-90 duration-300"
+              className="max-h-[100vh] px-6 py-4 fit-cover border-tertiary transform transition-all cursor-pointer hover:brightness-90 duration-300"
             />
           </div>
         </section>

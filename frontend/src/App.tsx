@@ -9,7 +9,7 @@ import {
 } from "./constants";
 import SideBar from "./components/Navigation/SideBar";
 import Events from "./components/Events";
-import About from "./components/About/Content";
+import Content from "./components/About/Content";
 import PaintingsViewer from "./components/Paintings/PaintingsViewer";
 import Background from "./components/Background";
 import Contact from "./components/Contact";
@@ -32,7 +32,7 @@ function App() {
                 element={<PaintingsViewer />}
               />
               <Route path={ROUTE_EVENTS} element={<Events />} />
-              <Route path={ROUTE_BIO} element={<About />} />
+              <Route path={ROUTE_BIO} element={<Content />} />
               <Route path={ROUTE_CONTACT} element={<Contact />} />
             </Routes>
             <Toaster />

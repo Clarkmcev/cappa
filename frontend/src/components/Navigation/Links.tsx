@@ -1,4 +1,3 @@
-import { IoMdMail } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 
 function Links() {
@@ -11,13 +10,8 @@ function Links() {
       <RiInstagramFill
         size={30}
         onClick={() =>
-          handleOnClick("https://www.instagram.com/amanda_mcevoy_art/")
+          handleOnClick("https://www.instagram.com/amanda_mc_studio")
         }
-        className="text-fourth/60 hover:text-fourth cursor-pointer duration-500 transition-all"
-      />
-      <IoMdMail
-        size={30}
-        onClick={() => handleOnClick("mailto:")}
         className="text-fourth/60 hover:text-fourth cursor-pointer duration-500 transition-all"
       />
     </div>
