@@ -52,7 +52,7 @@ function Painting({ index, data, variant }: Props) {
         >
           <div className="overflow-hidden my-auto flex space-x-4 items-center">
             <img
-              src={`../src/assets/${data.image}`}
+              src={`/${data.image}`}
               alt={data.title}
               className="max-h-[90vh] my-auto px-10 py-4 fit-cover border-tertiary transform transition-all cursor-pointer hover:brightness-90 duration-300"
             />
@@ -80,7 +80,7 @@ function Painting({ index, data, variant }: Props) {
         >
           <div className="overflow-hidden">
             <img
-              src={`../src/assets/${data.image}`}
+              src={`${data.image}`}
               alt={data.title}
               onClick={() => navigate(`${ROUTE_PAINTINGS}/${data.id}`)}
               className="max-h-[100vh] px-6 py-4 fit-cover border-tertiary transform transition-all cursor-pointer hover:brightness-90 duration-300"

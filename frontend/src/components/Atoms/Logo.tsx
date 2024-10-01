@@ -7,7 +7,7 @@ function Logo({ isNav }: LogoProps) {
     <div
       className={`py-4 pl-4 font-bold font-custom border-x-transparent border-t-transparent border-solid border-2   ${
         isNav
-          ? "text-primary border-b-transparent text-sm"
+          ? "text-fourth border-b-transparent text-sm"
           : "text-fourth border-b-fourth/20 text-2xl"
       }`}
     >

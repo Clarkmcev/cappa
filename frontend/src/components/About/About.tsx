@@ -1,6 +1,6 @@
 function About() {
   return (
-    <div className="flex-col space-y-4 opacity-0 text-primary text-lg font-custom">
+    <div className="flex-col space-y-4 opacity-0 text-primary font-custom text-sm md:text-lg">
       <div className="opacity-0">Hi there, I am Amanda.</div>
       <div className="opacity-0">
         A French-American artist who grew up in the charming region of Alsace. I
@@ -12,7 +12,7 @@ function About() {
         experiment and master them all, as I continue to express my unique
         creative vision through my work.
       </div>
-      <div className="opacity-0 text-primary text-lg">
+      <div className="opacity-0 text-primary">
         Dynamic and creative individual with a passion for bringing people
         together and celebrating the arts. Whether you’re organizing events that
         inspire connection and creativity or collaborating with fellow artists,

@@ -61,5 +61,5 @@ body {
 }
 
 .MuiSvgIcon-root {
-  @apply text-primary/60 hover:text-primary cursor-pointer duration-500 transition-all !important;
+  @apply text-fourth/60 hover:text-fourth cursor-pointer duration-500 transition-all !important;
 }

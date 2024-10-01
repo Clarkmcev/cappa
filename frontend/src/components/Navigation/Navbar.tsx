@@ -12,7 +12,7 @@ function Navbar() {
   };
 
   return (
-    <div className="md:hidden w-full flex items-center justify-between px-4 bg-fourth fixed z-50 border border-primary/10 border-x-transparent border-t-transparent border-b-2">
+    <div className="md:hidden w-full flex items-center justify-between px-4 bg-primary fixed z-50 border border-primary/10 border-x-transparent border-t-transparent border-b-2">
       <Logo isNav={true} />
       <FormControl variant="standard">
         <Select
@@ -22,7 +22,7 @@ function Navbar() {
           id="demo-simple-select"
           value={12}
           label="Age"
-          inputProps={{ disableUnderline: true }} // Disable underline
+          inputProps={{ disableUnderline: true }}
         >
           {sideBarButtons.map((route: Link, index: number) => {
             return (

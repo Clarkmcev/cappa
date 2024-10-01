@@ -34,7 +34,7 @@ run_image() {
 
 # steps
 docker_cleanup
-setup_and_pull
+# setup_and_pull
 
 # cleanup image docker
 # pull image from ECR
