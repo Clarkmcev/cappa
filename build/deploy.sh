@@ -1,14 +1,15 @@
 #!/bin/bash
 ## Deployment command to image
-echo "Deployment incoming"
-
+echo "Deployment incoming..."
 MONITOR_HOST="ubuntu@ec2-16-171-181-182.eu-north-1.compute.amazonaws.com"
 
-scp_mon() {
-  scp -i "~/.ssh/augsburg-clark.pem" "$@"
-}
 
-ssh_mon() {
-  ssh -i "~/.ssh/augsburg-clark.pem" "$@"
-}
+# Build image
+./build/build.sh
+
+# Push image
+./build/push-images.sh
+
+# Setup host
+./build/setup-host.sh
 

@@ -1,4 +1,4 @@
-amanda-mcstudio.com
+test-mcstudio.com
 
-root * /www
+root \* /www
 file_server

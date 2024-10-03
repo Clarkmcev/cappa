@@ -2,7 +2,9 @@
 source .env
 ECR_AWS_DIR="$STUDIO_ECR/amanda-studio:latest"
 
-echo "-- Pushing frontend image:"
+echo "-- Pushing frontend image :"
 aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 254352282618.dkr.ecr.eu-north-1.amazonaws.com
 docker tag $STUDIO_FRONTEND_IMAGE $ECR_AWS_DIR
 docker push $ECR_AWS_DIR
+
+echo "Success : Image pushed to ECR!"

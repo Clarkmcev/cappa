@@ -25,7 +25,7 @@ function App() {
           <Navbar />
           <div className="flex-grow">
             <Routes>
-              <Route path="/" element={<Navigate to={ROUTE_PAINTINGS} />} />
+              <Route path="/" element={<Paintings />} />
               <Route path={ROUTE_PAINTINGS} element={<Paintings />} />
               <Route
                 path={`${ROUTE_PAINTINGS}/:id`}
