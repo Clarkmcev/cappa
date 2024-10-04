@@ -6,10 +6,10 @@ export default defineConfig({
   // build: {
   //   assetsDir: "static/media",
   // },
-  build: {
-    outDir: "/var/www/",
-    emptyOutDir: true, // also necessary
-  },
+  // build: {
+  //   outDir: "/var/www/",
+  //   emptyOutDir: true, // also necessary
+  // },
   resolve: {
     alias: {
       src: "/src",

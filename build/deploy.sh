@@ -3,7 +3,6 @@
 echo "Deployment incoming..."
 MONITOR_HOST="ubuntu@ec2-16-171-181-182.eu-north-1.compute.amazonaws.com"
 
-
 # Build image
 ./build/build.sh
 
@@ -12,4 +11,3 @@ MONITOR_HOST="ubuntu@ec2-16-171-181-182.eu-north-1.compute.amazonaws.com"
 
 # Setup host
 ./build/setup-host.sh
-

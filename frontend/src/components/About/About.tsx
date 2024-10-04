@@ -1,27 +1,23 @@
 function About() {
   return (
     <div className="flex-col space-y-4 opacity-0 text-primary font-custom text-sm md:text-lg">
-      <div className="opacity-0">Hi there, I am Amanda.</div>
+      <div className="opacity-0">Hi there,</div>
       <div className="opacity-0">
-        A French-American artist who grew up in the charming region of Alsace. I
-        discovered my love for painting just before high school, thanks to my
-        dear childhood friend, and it was an instant connection from the very
-        first brushstroke. I am passionate about exploring the endless
-        possibilities of art, working with various mediums such as acrylics,
-        oils, and spray paints. My enthusiasm and curiosity drive me to
-        experiment and master them all, as I continue to express my unique
-        creative vision through my work.
+        I'm Amanda McEvoy, a self-taught Franco-American artist born and raised
+        in Colmar, a picturesque town nestled in the heart of Alsace.
       </div>
-      <div className="opacity-0 text-primary">
-        Dynamic and creative individual with a passion for bringing people
-        together and celebrating the arts. Whether you’re organizing events that
-        inspire connection and creativity or collaborating with fellow artists,
-        my work is driven by a deep love for expression and community. As a
-        painter, I bring a unique perspective to my projects, infusing my
-        artistic vision into everything you do. My role in hotel sales allows me
-        to seamlessly blend my creative talents with a keen business acumen,
-        ensuring that every experience you help curate is memorable and
-        meaningful.
+      <div className="opacity-0">
+        I use painting to express myself not only freely, but also, and above
+        all, spontaneously. In search of a natural harmony, I draw my
+        inspiration from my memories of striking landscapes, from the high peaks
+        of the Swiss mountains where I studied, to the colors of Colorado, where
+        my father is from. Nothing is premeditated; everything comes to life
+        according to my whims. My abstract paintings represent landscapes
+        regardless its perspective, seeking to capture a feeling rather than a
+        single truth. My portraits, on the other hand, are contrasting, at once
+        stoic and moving, between calm and chaos. I play with colors, brushes
+        and spray cans, having fun on canvas, never hesitating to break with
+        convention.
       </div>
       <div className="opacity-0">Peace,</div>
       <div className="opacity-0">Amanda</div>
