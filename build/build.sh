@@ -6,3 +6,4 @@ source .env
 # echo "Success : Image ${STUDIO_FRONTEND_IMAGE} built!"
 
 docker-compose build
+# builds => cappa-caddy
