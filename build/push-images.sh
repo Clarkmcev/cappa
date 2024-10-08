@@ -7,4 +7,10 @@ aws ecr get-login-password --region eu-north-1 | docker login --username AWS --p
 docker tag $STUDIO_FRONTEND_IMAGE $ECR_AWS_DIR
 docker push $ECR_AWS_DIR
 
-echo "Success : Image pushed to ECR!"
+if [ $? -ne 0 ]; then
+  echo "Error: Docker push failed."
+  exit 1
+  else
+  echo "Success : Image pushed to ECR!"
+fi
+
