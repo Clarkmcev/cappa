@@ -21,6 +21,9 @@ setup_and_pull() {
     ssh_custom docker pull 254352282618.dkr.ecr.eu-north-1.amazonaws.com/amanda-studio:latest
 }
 
+## Writing script setup in the host.
+## This script will be executed in the Studio EC2 instance
+## To down the docker-compose, pull the newest image and 
 write_script() {
     echo "Writing setup script to the Studio EC2 instance ..."
     touch /tmp/setup.sh
@@ -40,6 +43,7 @@ EOF
     echo "Setup script written in /tmp/setup.sh"
 }
 
+## Setup the host with the needed files
 setup_files() {
     echo "Setting up the AWS host with the necessary files ..."
     scp_key ./.env $STUDIO_EC2:/home/ubuntu
@@ -67,7 +71,7 @@ run_image() {
 }
 
 # Steps
-setup_files
+# setup_files
 write_script
 # docker_orchestrate
 ssh_custom /tmp/setup.sh

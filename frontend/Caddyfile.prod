@@ -1,4 +1,6 @@
 amanda-mcstudio.com
-
-root \* /www
-file_server
+{
+    root * /www
+    file_server
+    try_files {path} /index.html
+}
