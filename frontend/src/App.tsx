@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 import Paintings from "./components/Paintings";
 import {
@@ -17,6 +17,7 @@ import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navigation/Navbar";
 
 function App() {
+  console.log("HELLO");
   return (
     <div className="h-full">
       <BrowserRouter>

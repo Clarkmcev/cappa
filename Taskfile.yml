@@ -1,0 +1,31 @@
+## This files contains the tasks that can be run by the task runner
+version: "3"
+
+tasks:
+  default:
+    cmds:
+      - ./build/build.sh
+  dev:
+    deps: [build]
+    desc: Builds and runs the development environment
+    cmds:
+      - ./build/build.sh
+      - docker-compose up -d
+  down:
+    desc: Down the development environment
+    cmds:
+      - docker-compose down
+  build:
+    desc: Build image
+    cmds:
+      - ./build/build.sh
+  setup:
+    desc: Push images on ECR
+    cmds:
+      - ./build/push-images.sh
+      - ./build/setup-host.sh
+  deploy:
+    deps: [build, setup]
+    desc: Deploy the application
+    cmds:
+      - ./build/deploy.sh
