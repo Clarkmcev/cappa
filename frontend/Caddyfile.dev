@@ -1,6 +1,13 @@
+
+# Serves the frontend.
 :80
 {
     root * /www
     file_server
     try_files {path} /index.html
+}
+
+# Revers proxy to the backend service.
+:80/api {
+    reverse_proxy backend:60
 }
