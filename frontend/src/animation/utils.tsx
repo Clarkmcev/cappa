@@ -8,7 +8,7 @@ export function useMenuAnimation(isRendered: boolean, element: string) {
 
   useEffect(() => {
     animate(element, isRendered ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }, {
-      duration: 0.1,
+      duration: 1,
       delay: isRendered ? staggerMenuItems : 0,
     });
   }, [isRendered, animate, element]);

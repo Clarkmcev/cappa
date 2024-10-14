@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#EDDFE0",
-        secondary: "#F5F5F7",
-        tertiary: "#B7B7B7",
-        fourth: "#705C53",
+        primary: "#E5E5CB",
+        secondary: "#D5CEA3",
+        tertiary: "#3C2A21",
+        fourth: "#1A120B",
       },
       fontFamily: {
         sans: ['"Open Sans"', "sans-serif"],

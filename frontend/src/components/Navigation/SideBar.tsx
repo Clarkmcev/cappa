@@ -10,11 +10,15 @@ function SideBar() {
   const buttonRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const moveCursor = (index: number) => {
+    console.log(index);
     if (boxRef.current && buttonRefs.current[index]) {
       const rect = buttonRefs.current[index]?.getBoundingClientRect();
+      console.log(rect);
       boxRef.current.style.top = `${rect.top}px`;
       boxRef.current.style.height = `${rect.height}px`;
+      console.log("here");
     }
+    console.log(buttonRefs.current[index]);
   };
 
   const getIndexOfCurrentRoute = () => {
