@@ -44,11 +44,13 @@ function PaintingsViewer() {
       </Swiper>
       <div className="lowercase absolute top-4 right-4 z-50 group p-4 w-44 duration-150 transition-all">
         <button
-          className="absolute top-4 right-4 z-50 flex space-x-2 items-center text-primary"
+          className="absolute top-4 right-4 z-50 flex space-x-2 items-center text-primary group"
           onClick={() => navigate(ROUTE_PAINTINGS)}
         >
-          <ArrowBackIcon className="text-primary" />
-          <p className="lowercase font-custom">Home</p>
+          <ArrowBackIcon />
+          <p className="text-primary/60 hover:text-primary lowercase font-custom">
+            Home
+          </p>
         </button>
       </div>
       <Background isDark={true} />

@@ -4,21 +4,21 @@ import Button from "./Button";
 import Logo from "../Atoms/Logo";
 import { Link, sideBarButtons } from "./utils";
 import Links from "./Links";
+import { useFading } from "../../animation/utils";
 
 function SideBar() {
   const boxRef = useRef<HTMLDivElement>(null);
   const buttonRefs = useRef<(HTMLDivElement | null)[]>([]);
 
+  const { scope } = useFading();
+
   const moveCursor = (index: number) => {
-    console.log(index);
     if (boxRef.current && buttonRefs.current[index]) {
       const rect = buttonRefs.current[index]?.getBoundingClientRect();
-      console.log(rect);
       boxRef.current.style.top = `${rect.top}px`;
       boxRef.current.style.height = `${rect.height}px`;
       console.log("here");
     }
-    console.log(buttonRefs.current[index]);
   };
 
   const getIndexOfCurrentRoute = () => {
@@ -51,7 +51,9 @@ function SideBar() {
   };
 
   useEffect(() => {
-    moveCursor(getIndexOfCurrentRoute());
+    setTimeout(() => {
+      moveCursor(getIndexOfCurrentRoute());
+    }, 0);
   }, []);
 
   return (
@@ -78,10 +80,12 @@ function SideBar() {
               );
             })}
           </div>
-          <div
-            ref={boxRef}
-            className="absolute left-34 duration-[400ms] transition-all w-2 h-4 rounded-full bg-fourth/20"
-          ></div>
+          <div ref={scope}>
+            <div
+              ref={boxRef}
+              className="opacity-0 absolute left-34 duration-[400ms] transition-all w-2 h-4 rounded-full bg-fourth/20"
+            ></div>
+          </div>
           <Links />
         </div>
       </div>

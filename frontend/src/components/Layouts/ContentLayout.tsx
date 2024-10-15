@@ -20,9 +20,9 @@ const ContentLayout: React.FC<ContentLayoutProps> = ({
   return (
     <section
       ref={scope}
-      className="p-5 py-20 md:py-5 flex space-y-4 flex-col font-sans md:m-24 md:pl-64 xl:m-44"
+      className="p-5 py-20 md:py-5 flex space-y-4 flex-col font-sans md:m-24 md:pl-64 xl:m-44 max-w-[99vh]"
     >
-      <div className="opacity-0 text-primary cont-custom pb-4 text-xl md:text-4xl">
+      <div className="opacity-0 text-primary cont-custom py-4 pl-10 mb-4 text-xl md:text-4xl bg-fourth/40 rounded-xl">
         {title}
       </div>
       {body && (
