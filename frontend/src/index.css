@@ -63,3 +63,23 @@ body {
 .MuiSvgIcon-root {
   @apply text-primary/60 group-hover:text-primary cursor-pointer  !important;
 }
+
+.MuiSvgIcon-root {
+  @apply text-primary/60 group-hover:text-primary cursor-pointer  !important;
+}
+
+.MuiSvgIcon-fontSizeMedium[data-testid="MenuIcon"] {
+  @apply text-fourth/60 group-hover:text-fourth cursor-pointer  !important;
+}
+
+.MuiList-root {
+  @apply bg-red-500 py-0 rounded-xl shadow-none !important;
+}
+
+.MuiMenuItem-root {
+  @apply border-none font-custom !important;
+}
+
+.MuiPaper-root {
+  @apply shadow-none border-solid border border-fourth/40 !important;
+}
