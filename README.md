@@ -22,9 +22,3 @@ To set up the project for local development, follow these steps:
    git clone https://github.com/yourusername/paintings-website.git
    cd cappa
    ```
-
-2 Task file
-
-build image
-push image
-setup host down and up docker-compose up
