@@ -1,13 +1,13 @@
 function About() {
   return (
     <div className="space-y-4 opacity-0 text-primary font-custom text-sm md:text-lg flex-col flex xl:flex-row space-x-10">
-      <div className="opacity-0 flex-1 bg-fourth/20 mx-auto">
+      <div className="opacity-0 flex-1 w-full">
         <img
           src="amanda.png"
-          className="max-h-[50vh] transform transition-all cursor-pointer hover:brightness-90 duration-300 rounded-tl-3xl rounded-br-3xl border-solid border-[10px] border-primary/10"
+          className="max-h-[80vh] mx-auto transform transition-all cursor-pointer hover:brightness-90 duration-300 rounded-tl-3xl rounded-br-3xl border-solid border-[10px] border-primary/10"
         />
       </div>
-      <div className="opacity-0 flex flex-col space-y-4 flex-1">
+      <div className="opacity-0 flex flex-col space-y-4 flex-1 justify-center">
         <div className="opacity-0">Hi there,</div>
         <div className="opacity-0">
           I'm Amanda McEvoy, a self-taught Franco-American artist born and

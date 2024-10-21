@@ -1,14 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 import Paintings from "./components/Paintings";
-import {
-  ROUTE_PAINTINGS,
-  ROUTE_CONTACT,
-  ROUTE_EVENTS,
-  ROUTE_BIO,
-} from "./constants";
+import { ROUTE_PAINTINGS, ROUTE_CONTACT, ROUTE_BIO } from "./constants";
 import SideBar from "./components/Navigation/SideBar";
-import Events from "./components/Events";
 import Content from "./components/About/Content";
 import PaintingsViewer from "./components/Paintings/PaintingsViewer";
 import Background from "./components/Background";
@@ -32,7 +26,6 @@ function App() {
                 path={`${ROUTE_PAINTINGS}/:id`}
                 element={<PaintingsViewer />}
               />
-              <Route path={ROUTE_EVENTS} element={<Events />} />
               <Route path={ROUTE_BIO} element={<Content />} />
               <Route path={ROUTE_CONTACT} element={<Contact />} />
             </Routes>
