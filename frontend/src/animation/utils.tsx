@@ -1,5 +1,5 @@
 import { useAnimate, stagger } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const staggerMenuItems = stagger(0.2, { startDelay: 0.2 });
 
@@ -29,4 +29,47 @@ export function useFading() {
   }, []);
 
   return { scope };
+}
+
+export function useGrowBar() {
+  const bar = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  const initStyle = () => {
+    if (bar.current) {
+      const parentElement = bar.current.parentElement;
+      if (parentElement) {
+        parentElement.style.height = "60vh";
+      }
+
+      bar.current.className =
+        "w-2 rounded-full transition-all duration-[1s] bg-fourth/40";
+      bar.current.style.height = "0";
+    }
+  };
+
+  const growBar = () => {
+    setTimeout(() => {
+      if (bar.current) {
+        // bar.current.classList.add("bg-green-500");
+        bar.current.style.height = "100%";
+      }
+    }, 2000);
+  };
+
+  useEffect(() => {
+    initStyle();
+
+    setTimeout(() => {
+      setVisible(true);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
+    if (visible) {
+      growBar();
+    }
+  }, [visible]);
+
+  return { bar };
 }

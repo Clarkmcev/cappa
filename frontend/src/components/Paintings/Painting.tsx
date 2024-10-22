@@ -76,7 +76,7 @@ function Painting({ index, data, variant }: Props) {
           ref={imgRef}
           className={`${
             isInView ? "opacity-100 translate-x-0" : "opacity-0"
-          } duration-[400ms] transition-all`}
+          } duration-[400ms] transition-all md:ml-10`}
         >
           <div className="overflow-hidden">
             <img
