@@ -31,7 +31,7 @@ Backend
 
 CRUD
 
-Domain
+Domain via Caddy
 
 Postgres table
 
