@@ -36,4 +36,6 @@ Domain via Caddy
 Postgres table
 
 S3 Bucket
+
+Caddy domain to host website
 ```
