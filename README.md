@@ -26,7 +26,6 @@ To set up the project for local development, follow these steps:
 ```
 
 ### What to come
-
 Backend
 
 CRUD
