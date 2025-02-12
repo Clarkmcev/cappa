@@ -11,7 +11,6 @@ import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navigation/Navbar";
 
 function App() {
-  console.log("HELLO");
   return (
     <div className="h-full">
       <BrowserRouter>
