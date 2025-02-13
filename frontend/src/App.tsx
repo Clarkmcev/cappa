@@ -5,7 +5,6 @@ import { ROUTE_PAINTINGS, ROUTE_CONTACT, ROUTE_BIO } from "./constants";
 import SideBar from "./components/Navigation/SideBar";
 import Content from "./components/About/Content";
 import PaintingsViewer from "./components/Paintings/PaintingsViewer";
-import Background from "./components/Background";
 import Contact from "./components/Contact";
 import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navigation/Navbar";
@@ -17,7 +16,7 @@ function App() {
         <div className="flex h-screen z-50">
           <SideBar />
           <Navbar />
-          <div className="flex-grow">
+          <div className="flex-grow bg-fourth">
             <Routes>
               <Route path="/" element={<Paintings />} />
               <Route path={ROUTE_PAINTINGS} element={<Paintings />} />
@@ -29,7 +28,6 @@ function App() {
               <Route path={ROUTE_CONTACT} element={<Contact />} />
             </Routes>
             <Toaster />
-            <Background />
           </div>
         </div>
       </BrowserRouter>

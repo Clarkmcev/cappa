@@ -6,7 +6,7 @@ interface Props {
 
 function Background({ isDark }: Props) {
   return (
-    <div className="z-10 background">
+    <div className="z-10 bg-red-500">
       <div className={`area ${isDark && "dark"}`}>
         <ul className="circles">
           <li></li>

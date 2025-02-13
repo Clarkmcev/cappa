@@ -4,13 +4,10 @@ import Button from "./Button";
 import Logo from "../Atoms/Logo";
 import { Link, sideBarButtons } from "./utils";
 import Links from "./Links";
-import { useFading } from "../../animation/utils";
 
 function SideBar() {
   const boxRef = useRef<HTMLDivElement>(null);
   const buttonRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  const { scope } = useFading();
 
   const moveCursor = (index: number) => {
     if (boxRef.current && buttonRefs.current[index]) {
