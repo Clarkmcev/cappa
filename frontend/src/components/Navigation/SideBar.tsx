@@ -77,12 +77,6 @@ function SideBar() {
               );
             })}
           </div>
-          {/* <div ref={scope}>
-            <div
-              ref={boxRef}
-              className="opacity-0 absolute left-34 duration-[400ms] transition-all w-2 h-4 rounded-full bg-fourth/20"
-            ></div>
-          </div> */}
           <Links />
         </div>
       </div>
